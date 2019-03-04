@@ -6,12 +6,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Sets how many lines of history VIM has to remember
-set history=500
-
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+
+" Sets how many lines of history VIM has to remember
+set history=500
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -100,6 +100,10 @@ set virtualedit=onemore
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
+
+if exists('$TMUX')
+    set term=screen-256color
+endif
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
