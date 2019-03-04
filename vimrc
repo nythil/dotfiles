@@ -202,6 +202,11 @@ map <leader>k :buffers<cr>:buffer<space>
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
+map <leader>co :copen<cr>
+map <leader>cc :cclose<cr>
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+
 " Specify the behavior when switching between buffers
 try
   set switchbuf=useopen
